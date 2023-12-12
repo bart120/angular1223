@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/master/home/home.component';
 //import { CarsAddComponent } from './pages/cars/cars-add/cars-add.component';
 //import { LoginComponent } from './pages/authentication/login/login.component';
 import { NotFoundComponent } from './pages/master/not-found/not-found.component';
+import { LoginComponent } from './pages/authentication/login/login.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
