@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './menu.component.html'
 })
 export class MenuComponent {
-
+  title: string = 'Formation <strong>Angular</strong>';
 }

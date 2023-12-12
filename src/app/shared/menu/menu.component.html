@@ -1,1 +1,15 @@
-<p>menu works!</p>
+<mat-toolbar color="primary" role="heading">
+    <span [innerHTML]="title"></span>
+    <a [routerLink]="['/home']" mat-button>
+        Accueil
+    </a>
+    <a routerLink="/cars/list" mat-button>
+        Voitures
+    </a>
+    <a routerLink="/cars/add" mat-button>
+        Ajouter une voiture
+    </a>
+    <a routerLink="/auth/logi" mat-button>
+        Connexion
+    </a>
+</mat-toolbar>
