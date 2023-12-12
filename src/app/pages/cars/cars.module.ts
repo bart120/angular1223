@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CarsListComponent } from './cars-list/cars-list.component';
 import { CarsAddComponent } from './cars-add/cars-add.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CarsService } from '../../services/cars.service';
 
 const routes: Routes = [
   { path: 'list', component: CarsListComponent },
@@ -20,6 +21,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    CarsService
   ]
 })
 export class CarsModule { }
