@@ -7,6 +7,8 @@ import { CarsService } from '../../services/cars.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../../material/material.module';
 import { CarsDetailComponent } from './cars-detail/cars-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrandsService } from '../../services/brands.service';
 
 const routes: Routes = [
   { path: 'list', component: CarsListComponent },
@@ -27,11 +29,12 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [
     CarsService,
-
+    BrandsService
   ]
 })
 export class CarsModule { }

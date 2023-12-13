@@ -10,6 +10,15 @@ export class CarsService {
 
     }
 
+    /*get(endpoints: string, params: string): Observable<any> {
+        return this._http.get<any>(`${endpoints}/${params}`);
+    }*/
+
+    getById(id: number): Observable<CarModel> {
+        return this._http.get<CarModel>(`https://formation.inow.fr/demo/api/v1/cars/${id}`);
+    }
+
+
     getCars(): Observable<Array<CarModel>> {
         //console.log("getCars");
         /*return [
@@ -25,6 +34,11 @@ export class CarsService {
         console.log("FIN getcars");
         return [];*/
         return this._http.get<Array<CarModel>>("https://formation.inow.fr/demo/api/v1/cars");
+    }
+
+    insert(car: CarModel): Observable<CarModel> {
+        console.log(car);
+        return this._http.post<CarModel>("https://formation.inow.fr/demo/api/v1/cars", car);
     }
 
     /*(resp:any) =>{
