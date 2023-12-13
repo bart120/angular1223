@@ -9,10 +9,11 @@ import { MaterialModule } from '../../material/material.module';
 import { CarsDetailComponent } from './cars-detail/cars-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrandsService } from '../../services/brands.service';
+import { adminGuard } from '../../guards/admin.guard';
 
 const routes: Routes = [
   { path: 'list', component: CarsListComponent },
-  { path: 'add', component: CarsAddComponent },
+  { path: 'add', component: CarsAddComponent, canActivate: [adminGuard] },
   { path: 'detail/:id', component: CarsDetailComponent },
   { path: '', redirectTo: 'add', pathMatch: 'full' },
 
