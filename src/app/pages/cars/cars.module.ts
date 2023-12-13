@@ -6,10 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarsService } from '../../services/cars.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../../material/material.module';
+import { CarsDetailComponent } from './cars-detail/cars-detail.component';
 
 const routes: Routes = [
   { path: 'list', component: CarsListComponent },
   { path: 'add', component: CarsAddComponent },
+  { path: 'detail/:id', component: CarsDetailComponent },
   { path: '', redirectTo: 'add', pathMatch: 'full' },
 
   { path: '**', redirectTo: 'list' }
@@ -18,7 +20,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     CarsListComponent,
-    CarsAddComponent
+    CarsAddComponent,
+    CarsDetailComponent
   ],
   imports: [
     CommonModule,
