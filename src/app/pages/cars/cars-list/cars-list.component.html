@@ -1,5 +1,13 @@
 <p>cars-list works!</p>
 <div *ngFor="let car of cars">
-    <p>ID: {{car.id}}</p>
-    <p>Model: {{car.model}}</p>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{car.model}}</mat-card-title>
+            <mat-card-subtitle>{{car.price}} €</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <a mat-button routerLink="/cars/detail/{{car.id}}">Détail</a>
+        </mat-card-actions>
+    </mat-card>
 </div>
